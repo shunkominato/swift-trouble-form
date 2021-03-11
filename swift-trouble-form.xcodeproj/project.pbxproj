@@ -17,6 +17,7 @@
 		FABFC67825F9083700BF131A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABFC67725F9083700BF131A /* LoginViewController.swift */; };
 		FABFC67B25F908CE00BF131A /* SginUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABFC67A25F908CE00BF131A /* SginUpViewController.swift */; };
 		FABFC67F25F9A07800BF131A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FABFC67E25F9A07800BF131A /* GoogleService-Info.plist */; };
+		FABFC68325FA5DE900BF131A /* FormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABFC68225FA5DE900BF131A /* FormViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		FABFC67725F9083700BF131A /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		FABFC67A25F908CE00BF131A /* SginUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SginUpViewController.swift; sourceTree = "<group>"; };
 		FABFC67E25F9A07800BF131A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		FABFC68225FA5DE900BF131A /* FormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +115,7 @@
 			children = (
 				FABFC67725F9083700BF131A /* LoginViewController.swift */,
 				FABFC67A25F908CE00BF131A /* SginUpViewController.swift */,
+				FABFC68225FA5DE900BF131A /* FormViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -239,6 +242,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FABFC68325FA5DE900BF131A /* FormViewController.swift in Sources */,
 				FABFC67B25F908CE00BF131A /* SginUpViewController.swift in Sources */,
 				FABFC67825F9083700BF131A /* LoginViewController.swift in Sources */,
 				FA7D234325F8FCEF00911C86 /* LoginController.swift in Sources */,

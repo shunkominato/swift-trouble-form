@@ -16,14 +16,34 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.provider = OAuthProvider(providerID: TwitterAuthProvider)
+        self.provider = OAuthProvider(providerID: TwitterAuthProviderID)
         provider?.customParameters = ["lang":"ja"]
 
         // Do any additional setup after loading the view.
     }
     
     @IBAction func TwitterLogin(_ sender: Any) {
-        
+        self.provider = OAuthProvider(providerID: TwitterAuthProviderID)
+        provider?.customParameters = ["force_login":"true"]
+        provider?.getCredentialWith(nil, completion: { (credential, error) in
+            
+            Auth.auth().signIn(with: credential!) { (result, error) in
+                
+                if error != nil{
+                    return
+                }
+                
+                print("--------")
+                print(credential)
+                
+                let FormVC = self.storyboard?.instantiateViewController(identifier: "FormVC") as! FormViewController
+                
+                FormVC.userName = (result?.user.displayName)!
+                
+                self.navigationController?.pushViewController(FormVC, animated: true)
+                
+            }
+        })
     }
     
     /*

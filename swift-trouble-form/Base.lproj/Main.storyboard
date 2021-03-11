@@ -41,16 +41,16 @@
             </objects>
             <point key="canvasLocation" x="-217.39130434782609" y="59.598214285714285"/>
         </scene>
-        <!--View Controller-->
+        <!--Form View Controller-->
         <scene sceneID="3Yj-vZ-wBu">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="TQY-aj-lUJ" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FormVC" modalPresentationStyle="fullScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="TQY-aj-lUJ" customClass="FormViewController" customModule="swift_trouble_form" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3kV-6i-lCg">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dDZ-ze-zNS">
-                                <rect key="frame" x="232" y="398" width="42" height="21"/>
+                                <rect key="frame" x="137" y="364" width="137" height="55"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -61,10 +61,13 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="Xfn-uI-bg3"/>
+                    <connections>
+                        <outlet property="userNameLabel" destination="dDZ-ze-zNS" id="P1h-0S-WQV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OJA-Nb-usk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="558" y="60"/>
+            <point key="canvasLocation" x="556.52173913043487" y="59.598214285714285"/>
         </scene>
     </scenes>
     <resources>
