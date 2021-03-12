@@ -15,6 +15,7 @@ class LoginViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+//        title = "悩みフォーム"
         
         self.provider = OAuthProvider(providerID: TwitterAuthProviderID)
         provider?.customParameters = ["lang":"ja"]
@@ -23,37 +24,36 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func TwitterLogin(_ sender: Any) {
-        self.provider = OAuthProvider(providerID: TwitterAuthProviderID)
-        provider?.customParameters = ["force_login":"true"]
-        provider?.getCredentialWith(nil, completion: { (credential, error) in
-            
-            Auth.auth().signIn(with: credential!) { (result, error) in
-                
-                if error != nil{
-                    return
-                }
-                
-                print("--------")
-                print(credential)
-                
-                let FormVC = self.storyboard?.instantiateViewController(identifier: "FormVC") as! FormViewController
-                
-                FormVC.userName = (result?.user.displayName)!
-                
-                self.navigationController?.pushViewController(FormVC, animated: true)
-                
-            }
-        })
+//        let FormVC = self.storyboard?.instantiateViewController(identifier: "FormVC") as! FormViewController
+//        self.present(FormVC, animated: true, completion: nil)
+        performSegue(withIdentifier: "FormViewController",sender: nil)
+//        self.provider = OAuthProvider(providerID: TwitterAuthProviderID)
+//        provider?.customParameters = ["force_login":"true"]
+//        provider?.getCredentialWith(nil, completion: { (credential, error) in
+//
+//            Auth.auth().signIn(with: credential!) { (result, error) in
+//
+//                if error != nil{
+//                    return
+//                }
+//
+//                print("--------")
+//                print(result?.user)
+//
+//                let FormVC = self.storyboard?.instantiateViewController(identifier: "FormVC") as! FormViewController
+//
+//                FormVC.userName = (result?.user.displayName)!
+//
+////                self.navigationController?.pushViewController(FormVC, animated: true)
+////                self.performSegue(withIdentifier: "FormViewController", sender: nil)
+//                self.present(FormVC, animated: true, completion: nil)
+//            }
+//        })
     }
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        let FormVC = segue.destination as! FormViewController
+        FormVC.userName = "aaa"
     }
-    */
 
 }
